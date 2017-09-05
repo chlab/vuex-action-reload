@@ -1,5 +1,13 @@
 # vuex-action-reload
-A vuex plugin that reloads actions when a condition is met
+
+A vuex plugin that reloads actions when a condition is met.
+
+This handles the situation where a certain change in the vuex store requires other
+parts of the store to change. Ideally, the parts that should change are handled
+by dispatching actions (e.g. calling a remote API).
+
+An example of this would be changing the locale of your app, thus requiring a
+reload of all locale-dependent parts of your vuex store.
 
 ## Installation
 
