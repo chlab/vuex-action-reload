@@ -1,0 +1,30 @@
+{
+  "name": "vuex-action-reload",
+  "version": "1.0.0",
+  "description": "A vuex plugin that reloads actions when a condition is met",
+  "main": "dist/vuex-action-reload.js",
+  "scripts": {
+    "build": "babel src/plugin.js --out-file dist/vuex-action-reload.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/chlab/vuex-action-reload.git"
+  },
+  "keywords": [
+    "vue",
+    "vuex",
+    "vuejs",
+    "vue2"
+  ],
+  "author": "Christof Leuenberger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chlab/vuex-action-reload/issues"
+  },
+  "homepage": "https://github.com/chlab/vuex-action-reload#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1"
+  },
+  "dependencies": {}
+}
