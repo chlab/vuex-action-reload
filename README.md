@@ -1,5 +1,7 @@
 # vuex-action-reload
 
+[![npm version](https://badge.fury.io/js/vuex-action-reload.svg)](https://badge.fury.io/js/vuex-action-reload)
+
 A vuex plugin that reloads actions when a condition is met.
 
 This handles the situation where a certain change in the vuex store requires other
