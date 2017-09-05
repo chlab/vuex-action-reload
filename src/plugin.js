@@ -4,9 +4,7 @@ export default function createVuexReloadPlugin ({ actions, condition }) {
     store.subscribe(mutation => {
       // if it passes, dispatch all the actions
       if (condition(mutation) === true) {
-        actions.map(action => {
-          store.dispatch(action)
-        })
+        actions.map(action => store.dispatch(action))
       }
     })
   }
