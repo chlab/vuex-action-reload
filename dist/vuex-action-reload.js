@@ -1,12 +1,9 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = createVuexReloadPlugin;
-
-require('babel-polyfill');
-
 function createVuexReloadPlugin(_ref) {
   var actions = _ref.actions,
       condition = _ref.condition;
