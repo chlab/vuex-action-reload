@@ -41,12 +41,12 @@ test('condition handler receives vuex mutation', () => {
   })
 })
 
-test('registered action is called', () => {
+test('registered action is reloaded', () => {
   store.commit('triggerStateChange')
   expect(actionToBeCalled).toBeCalled()
 })
 
-test('non-registered action is called', () => {
+test('non-registered action is not reloaded', () => {
   store.commit('triggerStateChange')
   expect(actionNotToBeCalled).toHaveBeenCalledTimes(0)
 })
