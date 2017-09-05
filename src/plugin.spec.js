@@ -8,6 +8,7 @@ const conditionHandler = jest
   .fn()
   .mockImplementation(mutation => mutation.type === 'triggerStateChange')
 const actionToBeCalled = jest.fn()
+const actionToAlsoBeCalled = jest.fn()
 const actionNotToBeCalled = jest.fn()
 
 const store = new Store({
@@ -17,18 +18,17 @@ const store = new Store({
 
   actions: {
     reloadThis: actionToBeCalled,
+    alsoReloadThis: actionToAlsoBeCalled,
     dontReloadThis: actionNotToBeCalled
   },
   
   mutations: {
-    triggerStateChange: state => {
-      state.foo = 'baz'
-    }
+    triggerStateChange: state => {}
   },
   
   plugins: [
     createVuexReloadPlugin({
-      actions: ['reloadThis'],
+      actions: ['reloadThis', 'alsoReloadThis'],
       condition: conditionHandler
     })
   ]
@@ -41,9 +41,10 @@ test('condition handler receives vuex mutation', () => {
   })
 })
 
-test('registered action is reloaded', () => {
+test('all registered actions are reloaded', () => {
   store.commit('triggerStateChange')
   expect(actionToBeCalled).toBeCalled()
+  expect(actionToAlsoBeCalled).toBeCalled()
 })
 
 test('non-registered action is not reloaded', () => {
