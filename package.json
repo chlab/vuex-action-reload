@@ -1,6 +1,6 @@
 {
   "name": "vuex-action-reload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A vuex plugin that reloads actions when a condition is met",
   "main": "dist/vuex-action-reload.js",
   "scripts": {
