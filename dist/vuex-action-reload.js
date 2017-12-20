@@ -14,7 +14,7 @@ function createVuexReloadPlugin(_ref) {
       // if it passes, dispatch all the actions
       if (condition(mutation) === true) {
         actions.map(function (action) {
-          store.dispatch(action);
+          return store.dispatch(action);
         });
       }
     });
